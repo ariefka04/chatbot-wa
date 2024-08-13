@@ -29,7 +29,9 @@ wa.create({
 function start(client) {
   // Handle incoming messages
   client.onMessage(async (message) => {
-    await client.sendText(message.from, "Hello");
+    if (message === "Hello") {
+      await client.sendText(message.from, "Hai, WA BPS disini");
+    }
   });
 }
 
