@@ -31,8 +31,7 @@ function start(client) {
   client.onMessage(async (message) => {
     console.log(message);
     console.log(message.from);
-
-    if (message === "Hello") {
+    if (message.body === "Hello") {
       await client.sendText(message.from, "Hai, WA BPS disini");
     }
   });
