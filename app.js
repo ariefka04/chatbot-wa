@@ -29,6 +29,9 @@ wa.create({
 function start(client) {
   // Handle incoming messages
   client.onMessage(async (message) => {
+    console.log(message);
+    console.log(message.from);
+
     if (message === "Hello") {
       await client.sendText(message.from, "Hai, WA BPS disini");
     }
