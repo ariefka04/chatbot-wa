@@ -64,6 +64,8 @@ function start(client) {
         Silahkan pilih data yang diingin
       `
       );
+    } else if (message.body == "file") {
+      await client.sendFile();
     }
   });
 }
