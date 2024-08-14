@@ -59,6 +59,8 @@ Silahkan pilih data yang diinginkan
         "Berikut ini adalah file yang diminta",
         message.quotedMessageId
       );
+    } else if (message.body.toLowerCase() == "arief") {
+      await client.sendText("Anjay arief");
     } else if (message.body) {
       await client.sendText(
         message.from,
