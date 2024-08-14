@@ -31,41 +31,47 @@ function start(client) {
   client.onMessage(async (message) => {
     console.log(message);
     console.log(message.from);
-    if (message.body) {
-      await client.sendText(
-        message.from,
-        `Halo selamat datang di WA Bot BPS Keerom.
-          Silahkan ketik angka untuk:
-          1. Rekomendasi Statistik
-          2. Permintaan Data
-          3. Pembinaan Statistik Sektoral
-          4. Konsultasi Data Statistik
-
-          Silahkan pilih layanan yang diinginkan
-        `
-      );
-    } else if (message.body == "1") {
+    if (message.body == "1") {
       await client.sendText(
         message.from,
         `
-        1a. Penduduk
-        1b. Kemiskinan
+1a. Penduduk
+1b. Kemiskinan
 
-        Silahkan pilih rekomendasi statistik yang diinginkan
+Silahkan pilih rekomendasi statistik yang diinginkan
         `
       );
     } else if (message.body == "2") {
       await client.sendText(
         message.from,
         `
-        2a. Tabulasi data
-        2b. Publikasi
+2a. Tabulasi data
+2b. Publikasi
         
-        Silahkan pilih data yang diingin
+Silahkan pilih data yang diinginkan
       `
       );
     } else if (message.body == "file") {
-      await client.sendFile();
+      await client.sendFile(
+        message.chatId,
+        "./example.pdf",
+        "file.pdf",
+        "Berikut ini adalah file yang diminta",
+        message.quotedMessageId
+      );
+    } else if (message.body) {
+      await client.sendText(
+        message.from,
+        `Halo selamat datang di WA Bot *BPS Keerom*.
+Silahkan ketik angka untuk:
+1. Rekomendasi Statistik
+2. Permintaan Data
+3. Pembinaan Statistik Sektoral
+4. Konsultasi Data Statistik
+
+Silahkan pilih layanan yang diinginkan
+        `
+      );
     }
   });
 }
