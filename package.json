@@ -10,7 +10,7 @@
     "WA",
     "Chatbot"
   ],
-  "author": "Eric Julianto",
+  "author": "Arief KA",
   "license": "MIT",
   "dependencies": {
     "@open-wa/wa-automate": "^4.72.1",

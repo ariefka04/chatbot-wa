@@ -131,7 +131,7 @@ Silahkan ketik 'menu utama' atau ketik 0`
           message.from,
           `Anda telah memilih bidang Sosial dan Kependudukan
 
-Silakan ketik kode yang ingin Anda pilih untuk Subjek:
+Silahkan ketik kode yang ingin Anda pilih untuk Subjek:
 2a1 Geografi
 2a2 Iklim
 2a3 Indeks Pembangunan Manusia
