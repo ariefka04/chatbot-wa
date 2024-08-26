@@ -119,10 +119,127 @@ Silahkan ketik 'menu utama' atau ketik 0`
       case lowerCaseMessage === "2":
         await client.sendText(
           message.from,
-          `2a. Tabulasi data
-2b. Publikasi
-        
-Silahkan pilih data yang diinginkan`
+          `Silahkan ketik kode yang ingin Anda pilih untuk bidang:
+2a Sosial dan Kependudukan
+2b Ekonomi dan Perdagangan
+2c Pertanian dan Pertambangan`
+        );
+        break;
+
+      case lowerCaseMessage === "2a":
+        await client.sendText(
+          message.from,
+          `Anda telah memilih bidang Sosial dan Kependudukan
+
+Silakan ketik kode yang ingin Anda pilih untuk Subjek:
+2a1 Geografi
+2a2 Iklim
+2a3 Indeks Pembangunan Manusia
+2a4 Kemiskinan
+2a5 Kependudukan
+2a6 Kesehatan
+2a7 Konsumsi dan Pengeluaran
+2a8 Pemerintahan
+2a9 Pendidikan
+2a10 Perumahan
+2a11 Politik dan Keamanan
+2a12 Tenaga Kerja
+
+Pilih untuk menampilkan Indikator
+
+Ketik 2 untuk kembali ke pilihan bidang`
+        );
+        break;
+
+      case lowerCaseMessage === "2a5":
+        await client.sendText(
+          message.from,
+          `Anda telah memilih Subjek 2a5 Kependudukan
+
+Silahkan ketik kode yang ingin Anda tampilkan untuk indikator:
+*2a51* Jumlah penduduk menurut distrik dan jenis kelamin
+*2a52* Proyeksi penduduk
+*2a53* Rasio jenis kelamin menurut Kecamatan
+
+Pilih untuk menampilkan tahun
+
+Ketik *2a* untuk kembali ke pilihan subjek`
+        );
+        break;
+
+      case lowerCaseMessage === "2a51":
+        await client.sendText(
+          message.from,
+          `Anda telah memillih Jumlah penduduk menurut distrik dan jenis kelamin
+
+Silahkan ketik kode yang ingin Anda pilih untuk tahun:
+*25a11* 2010-2015
+*25a12* 2011-2016
+*25a13* 2012-2017`
+        );
+        break;
+
+      case lowerCaseMessage === "2a511":
+        await client.sendText(
+          message.from,
+          `Anda telah memillih Jumlah penduduk menurut distrik dan jenis kelamin untuk tahun 2010-2015
+Berikut ini adalah filenya`
+        );
+
+        await client.sendFile(
+          message.chatId,
+          "./example.pdf",
+          "file.pdf",
+          "Jumlah penduduk menurut distrik dan jenis kelamin untuk tahun 2010-2015",
+          message.quotedMessageId
+        );
+
+        await client.sendText(
+          message.from,
+          "Silahkan ketik 'menu utama' atau 0 untuk kembali ke awal"
+        );
+        break;
+
+      case lowerCaseMessage === "2b":
+        await client.sendText(
+          message.from,
+          `Anda telah memilih bidang Ekonomi dan Perdagangan
+
+Silakan ketik kode yang ingin Anda pilih untuk Subjek:
+2b1 Energi
+2b2 Harga Eceran
+2b3 Harga Produsen
+2b4 Industri
+2b5 Keuangan
+2b6 Komunikasi
+2b7 Konstruksi
+2b8 Pariwisata
+2b9 Produk Domestik Regional Bruto
+2b10 Transportasi
+
+Pilih untuk menampilkan Indikator
+
+Ketik 2 untuk kembali ke pilihan bidang`
+        );
+        break;
+
+      case lowerCaseMessage === "2c":
+        await client.sendText(
+          message.from,
+          `Anda telah memilih bidang Pertanian dan Pertambangan
+
+Silakan ketik kode yang ingin Anda pilih untuk Subjek:
+2c1 Hortikultura
+2c2 Kehutanan
+2c3 Perikanan
+2c4 Perkebunan
+2c5 Pertambangan
+2c6 Peternakan
+2c7 Tanaman Pangan
+
+Pilih untuk menampilkan Indikator
+
+Ketik 2 untuk kembali ke pilihan bidang`
         );
         break;
 
